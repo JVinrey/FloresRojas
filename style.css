@@ -7,12 +7,31 @@
 }
 
 :root {
-  --dark-color: #000;
-  --page-bg-start: #fff7fb;
-  --page-bg-mid: #ffe4f0;
-  --page-bg-end: #f7cfe3;
-  --primary-color: #ff6b9d;
+  --dark-color: #140008;
+
+  /* Fondo oscuro rojo predeterminado */
+  --page-bg-start: #250010;
+  --page-bg-mid: #4b0028;
+  --page-bg-end: #6b0038;
+
+  /* Colores principales */
+  --primary-color: #ff5fa2;
+  --primary-soft: #ff9ac5;
   --text-light: #ffffff;
+  --text-romantic: #ffd6e8;
+}
+
+/* Fondo general oscuro rojo */
+body {
+  background:
+    radial-gradient(circle at top, rgba(255, 120, 180, 0.13), transparent 38%),
+    radial-gradient(circle at center, rgba(90, 0, 40, 0.55), transparent 55%),
+    linear-gradient(
+      180deg,
+      var(--page-bg-start) 0%,
+      var(--page-bg-mid) 55%,
+      var(--page-bg-end) 100%
+    ) !important;
 }
 
 /* === ESTILOS DE BIENVENIDA === */
@@ -22,7 +41,8 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 45%),
+  /* más tenue: menos foco blanco para mantener tonos oscuros */
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 45%),
     linear-gradient(160deg, var(--page-bg-start) 0%, var(--page-bg-mid) 52%, var(--page-bg-end) 100%);
   display: flex;
   align-items: center;
@@ -54,7 +74,7 @@
 .beautiful-phrase p {
   font-size: 0.9rem;
   font-style: italic;
-  color: rgba(95, 43, 87, 0.78);
+  color: rgba(247, 247, 247, 0.78);
   line-height: 1.4;
 }
 
@@ -73,7 +93,7 @@
 
 .greeting-subtitle {
   font-size: 1.1rem;
-  color: rgba(95, 43, 87, 0.85);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
   opacity: 0;
   animation: slideUp 1s ease-out 0.4s forwards;
@@ -296,7 +316,8 @@ body {
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
-  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.65), transparent 35%),
+  /* fondo general más oscuro y suave: reducir el halo claro */
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.06), transparent 35%),
     linear-gradient(180deg, var(--page-bg-start) 0%, var(--page-bg-mid) 55%, var(--page-bg-end) 100%);
   overflow: hidden;
   perspective: 1000px;
